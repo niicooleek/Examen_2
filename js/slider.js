@@ -30,12 +30,16 @@ function renderearTestimonial(testimonial) {
   );
 }
 
-function slideSiguiente() {
 
+
+function slideSiguiente() {
+  slideActual++;
+  ajustarSlider();
 }
 
 function slidePrevio() {
-
+  slideActual--;
+  ajustarSlider();
 }
 
 function irASlide(slide) {
