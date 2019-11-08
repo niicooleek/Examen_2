@@ -43,7 +43,8 @@ function slidePrevio() {
 }
 
 function irASlide(slide) {
-
+  slideActual = slide;
+  ajustarSlider();
 }
 
 function ajustarSlider() {
@@ -54,6 +55,19 @@ function ajustarSlider() {
 }
 
 function ajustarFlechas() {
+  var leftArrow = document.getElementById("flechaIzquierda");
+  var rightArrow = document.getElementById("flechaDerecha");
+  if (slideActual === 0) {
+    leftArrow.style.visibility = "hidden";
+  } else {
+    leftArrow.style.visibility = "visible";
+  }
+
+  if (slideActual === testimoniales.length - 1) {
+    rightArrow.style.visibility = "hidden";
+  } else {
+    rightArrow.style.visibility = "visible";
+  }
 
 }
 
